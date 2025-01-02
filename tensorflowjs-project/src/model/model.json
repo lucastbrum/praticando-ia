@@ -1,0 +1,75 @@
+{
+  "modelTopology": {
+    "keras_version": "2.3.0",
+    "backend": "tensorflow",
+    "model_config": {
+      "class_name": "Sequential",
+      "config": [
+        {
+          "class_name": "Dense",
+          "config": {
+            "units": 64,
+            "activation": "relu",
+            "use_bias": true,
+            "kernel_initializer": {
+              "class_name": "VarianceScaling",
+              "config": {
+                "scale": 1.0,
+                "mode": "fan_avg",
+                "distribution": "uniform"
+              }
+            },
+            "bias_initializer": {
+              "class_name": "Zeros",
+              "config": {}
+            },
+            "input_shape": [null, 32]
+          }
+        },
+        {
+          "class_name": "Dense",
+          "config": {
+            "units": 10,
+            "activation": "softmax",
+            "use_bias": true,
+            "kernel_initializer": {
+              "class_name": "VarianceScaling",
+              "config": {
+                "scale": 1.0,
+                "mode": "fan_avg",
+                "distribution": "uniform"
+              }
+            },
+            "bias_initializer": {
+              "class_name": "Zeros",
+              "config": {}
+            }
+          }
+        }
+      ]
+    },
+    "weightsManifest": [
+      {
+        "paths": ["model_weights.bin"],
+        "weights": [
+          {
+            "name": "dense/kernel",
+            "shape": [32, 64]
+          },
+          {
+            "name": "dense/bias",
+            "shape": [64]
+          },
+          {
+            "name": "dense_1/kernel",
+            "shape": [64, 10]
+          },
+          {
+            "name": "dense_1/bias",
+            "shape": [10]
+          }
+        ]
+      }
+    ]
+  }
+}
